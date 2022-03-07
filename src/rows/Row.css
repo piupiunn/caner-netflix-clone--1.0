@@ -1,0 +1,39 @@
+.row {
+  margin-left: 20px;
+  color: white;
+  margin-top: 200px;
+}
+.row-posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll; /*scrollu y ekseninde gizleyip x eksenine verdim*/
+  padding-top: 48px;
+  padding-left: 80px;
+  padding-right: 70px;
+  padding-bottom: 70px;
+}
+
+.row-posters::-webkit-scrollbar {
+  display: none; /*tüm webbrowserlarda scrollbarın işlevini koruyup gözükmemesini sağladım.*/
+}
+
+.row-poster {
+  object-fit: contain;
+  width: 300px;
+  padding-top: -15px;
+  margin-right: 10px;
+}
+
+.all-hover:hover {
+  transform: scale(1.5);
+  transition: 350ms;
+}
+.row-poster-large {
+  max-height: 200px;
+}
+
+.netflix-originals {
+  position: absolute;
+  top: 600px;
+  margin-left: 20px;
+}
