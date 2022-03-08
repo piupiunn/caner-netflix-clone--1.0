@@ -30,7 +30,9 @@ export default function Navbar() {
         alt="logo"
       />
       <div className="navbar-sections">
-        <p>Ana Sayfa</p>
+        <p>
+          <b>Ana Sayfa</b>
+        </p>
 
         <p>Diziler</p>
         <p>Filmler</p>
