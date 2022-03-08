@@ -25,6 +25,8 @@ function Row({ title, fetchUrl, isLargeRow, netflixOriginals }) {
     fetchData();
   }, [fetchUrl]);
 
+  const topTen = () => {};
+
   return (
     <div className={`row ${netflixOriginals && "netflix-originals"}`}>
       <h2 className="list-title">{title}</h2>
@@ -39,7 +41,6 @@ function Row({ title, fetchUrl, isLargeRow, netflixOriginals }) {
               }`}
               alt={movie.name}
             />
-
             <div className="icons">
               <FaRegPlayCircle
                 style={{ marginRight: "3px", fontSize: "23px" }}
