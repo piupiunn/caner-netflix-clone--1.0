@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "../axios";
 import requests from "../requests";
+import { FaPlay, FaInfo } from "react-icons/fa";
 
 //style
 import "./Banner.css";
@@ -43,9 +44,12 @@ function Banner() {
             {movie.overview?.substring(0, 150)}...
           </h1>
           <div className="banner-buttons">
-            <button className="banner-button-play"> => Oynat</button>
+            <button className="banner-button-play">
+              {" "}
+              <FaPlay /> Oynat
+            </button>
             <button className="banner-button-moreinfo">
-              => Daha fazla Bilgi
+              <FaInfo /> Daha fazla Bilgi
             </button>
           </div>
         </div>

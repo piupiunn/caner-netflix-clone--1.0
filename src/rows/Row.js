@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "../axios";
-
+import {
+  FaRegPlayCircle,
+  FaRegThumbsUp,
+  FaRegThumbsDown,
+  FaRegCheckCircle,
+  FaAngleDown,
+} from "react-icons/fa";
 //style
 import "./Row.css";
 
@@ -20,7 +26,7 @@ function Row({ title, fetchUrl, isLargeRow, netflixOriginals }) {
 
   return (
     <div className={`row ${netflixOriginals && "netflix-originals"}`}>
-      <h2>{title}</h2>
+      <h2 className="list-title">{title}</h2>
 
       <div className="row-posters">
         {movies.map((movie) => (
@@ -33,7 +39,28 @@ function Row({ title, fetchUrl, isLargeRow, netflixOriginals }) {
               alt={movie.name}
             />
 
-            <div className="icons">x+y+z+q</div>
+            <div className="icons">
+              <FaRegPlayCircle
+                style={{ marginRight: "3px", fontSize: "30px" }}
+              />
+              <FaRegCheckCircle
+                style={{ marginRight: "3px", fontSize: "30px" }}
+              />
+              <FaRegThumbsUp style={{ marginRight: "3px", fontSize: "30px" }} />
+              <FaRegThumbsDown
+                style={{
+                  marginRight: "3px",
+                  fontSize: "30px",
+                  paddingTop: "1px",
+                }}
+              />
+              <FaAngleDown style={{ position: "absolute", right: "20px" }} />
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              xyz
+            </div>
           </div>
         ))}
       </div>

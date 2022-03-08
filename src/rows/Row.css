@@ -7,10 +7,13 @@
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll; /*scrollu y ekseninde gizleyip x eksenine verdim*/
-  padding-top: 48px;
+  padding-top: 80px;
   padding-left: 80px;
   padding-right: 70px;
   padding-bottom: 70px;
+}
+.list-title {
+  display: inline-block;
 }
 
 .row-posters::-webkit-scrollbar {
@@ -23,10 +26,24 @@
   padding-top: -15px;
   margin-right: 10px;
 }
+.all-hover .icons {
+  visibility: hidden;
+
+  width: 299px;
+  background-color: #141414;
+  -webkit-box-shadow: 5px 10px 5px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 10px 5px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 10px 5px -2px rgba(0, 0, 0, 0.75);
+  border-color: #141414;
+}
+.all-hover:hover .icons {
+  visibility: visible;
+}
 
 .all-hover:hover {
   transform: scale(1.5);
   transition: 350ms;
+  visibility: visible;
 }
 .row-poster-large {
   max-height: 200px;
