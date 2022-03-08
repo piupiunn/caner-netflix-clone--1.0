@@ -15,7 +15,7 @@
   object-fit: contain;
   width: 80px;
   position: fixed;
-  left: 20px;
+  left: 60px;
 }
 .navbar-avatar {
   object-fit: contain;
@@ -26,4 +26,11 @@
 
 .nav-black {
   background-color: rgb(18, 18, 18);
+}
+.navbar-sections {
+  display: flex;
+  margin-left: 150px;
+}
+.navbar-sections p {
+  padding-left: 10px;
 }

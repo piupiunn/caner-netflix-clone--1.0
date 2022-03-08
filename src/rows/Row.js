@@ -29,9 +29,9 @@ function Row({ title, fetchUrl, isLargeRow, netflixOriginals }) {
 
   return (
     <div className={`row ${netflixOriginals && "netflix-originals"}`}>
-      <h2 className="list-title">{title}</h2>
-
       <div className="row-posters">
+        <h2 className="list-title">{title}</h2>
+
         {movies.map((movie) => (
           <div key={movie.id} className="all-hover">
             <img

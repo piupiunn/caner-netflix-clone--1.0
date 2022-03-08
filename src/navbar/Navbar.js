@@ -13,7 +13,7 @@ export default function Navbar() {
       } else handleShow(false);
     });
     return () => {
-      window.removeEventListener("scroll");
+      window.removeEventListener("scroll", null);
     };
   }, []);
 
@@ -29,6 +29,14 @@ export default function Navbar() {
         src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
         alt="logo"
       />
+      <div className="navbar-sections">
+        <p>Ana Sayfa</p>
+
+        <p>Diziler</p>
+        <p>Filmler</p>
+        <p>Yeni ve Popüler</p>
+        <p>Listem</p>
+      </div>
     </div>
   );
 }
