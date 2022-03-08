@@ -9,13 +9,13 @@
   overflow-y: hidden;
   overflow-x: scroll; /*scrollu y ekseninde gizleyip x eksenine verdim*/
   padding-top: 70px;
-  padding-left: 0px;
+  padding-left: 80px;
   padding-right: 70px;
   padding-bottom: 90px;
 }
 .list-title {
-  margin-top: -60px;
-  width: max-content;
+  padding-top: 60px;
+  margin-left: 10px;
 }
 
 .row-posters::-webkit-scrollbar {
@@ -25,20 +25,22 @@
 .row-poster {
   object-fit: contain;
   width: 300px;
-  padding-top: -15px;
+  margin-bottom: -5px;
   margin-right: 10px;
   border-radius: 4px;
 }
 
 .all-hover .icons {
   visibility: hidden;
-  margin-top: 8px;
+
+  padding-top: 15px;
   width: 299px;
   background-color: #141414;
   -webkit-box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.75);
   box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.75);
   border-color: #141414;
+  border-radius: 4px;
 }
 .all-hover:hover .icons {
   visibility: visible;
@@ -50,8 +52,6 @@
 }
 .row-poster-large {
   max-height: 200px;
-  margin-top: 10px;
-  padding-bottom: 15px;
 }
 
 .netflix-originals {
