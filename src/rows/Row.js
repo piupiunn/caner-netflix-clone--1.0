@@ -6,6 +6,7 @@ import {
   FaRegThumbsDown,
   FaRegCheckCircle,
   FaAngleDown,
+  FaDotCircle,
 } from "react-icons/fa";
 //style
 import "./Row.css";
@@ -41,25 +42,30 @@ function Row({ title, fetchUrl, isLargeRow, netflixOriginals }) {
 
             <div className="icons">
               <FaRegPlayCircle
-                style={{ marginRight: "3px", fontSize: "30px" }}
+                style={{ marginRight: "3px", fontSize: "23px" }}
               />
               <FaRegCheckCircle
-                style={{ marginRight: "3px", fontSize: "30px" }}
+                style={{ marginRight: "3px", fontSize: "23px" }}
               />
-              <FaRegThumbsUp style={{ marginRight: "3px", fontSize: "30px" }} />
+              <FaRegThumbsUp style={{ marginRight: "3px", fontSize: "23px" }} />
               <FaRegThumbsDown
                 style={{
                   marginRight: "3px",
-                  fontSize: "30px",
+                  fontSize: "23px",
                   paddingTop: "1px",
                 }}
               />
               <FaAngleDown style={{ position: "absolute", right: "20px" }} />
               <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              xyz
+              <p className="match">98% Eşleşme</p>
+              <p className="age">16+</p>
+              <p className="hour">1sa. 47dk.</p>
+              <ul className="genre">
+                Komik
+                <FaDotCircle className="dot" />
+                Eğlenceli
+                <FaDotCircle className="dot" /> Heyecanlı
+              </ul>
             </div>
           </div>
         ))}
