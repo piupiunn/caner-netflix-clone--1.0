@@ -1,8 +1,9 @@
 .row {
   margin-left: 20px;
   color: white;
-  margin-top: 200px;
+  margin-top: 140px;
   height: 100px;
+  padding-bottom: 80px;
 }
 .row-posters {
   display: flex;
@@ -15,7 +16,7 @@
 }
 .list-title {
   margin-bottom: -50px;
-  margin-left: 10px;
+  margin-left: 80px;
 }
 
 .row-posters::-webkit-scrollbar {
@@ -25,6 +26,7 @@
 .row-poster {
   object-fit: contain;
   width: 300px;
+  margin-top: 0px;
   margin-bottom: -5px;
   margin-right: 10px;
   border-radius: 4px;
@@ -56,7 +58,7 @@
 
 .netflix-originals {
   position: absolute;
-  top: 600px;
+  top: 700px;
 }
 .match {
   color: #46d369;

@@ -4,6 +4,7 @@
 .app {
   background-color: #141414;
   position: relative;
+  overflow-y: hidden;
 }
 
 .app .original {
