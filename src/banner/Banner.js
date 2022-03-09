@@ -54,17 +54,12 @@ function Banner() {
         .catch((error) => console.log(error));
     }
   };
-  const handleLeave = () => {
-    setTrailerUrl("");
-  };
 
   return (
     <div>
       {trailerUrl && <Youtube videoId={trailerUrl} opts={opts} />}
       {!trailerUrl && (
         <header
-          onMouseLeave={handleLeave}
-          onMouseEnter={() => handleEnter(movie)}
           style={{
             backgroundSize: "cover",
             backgroundImage: `url(
@@ -83,8 +78,10 @@ function Banner() {
               {movie.overview?.substring(0, 150)}...
             </h1>
             <div className="banner-buttons">
-              <button className="banner-button-play">
-                {" "}
+              <button
+                onClick={() => handleEnter(movie)}
+                className="banner-button-play"
+              >
                 <FaPlay /> Oynat
               </button>
               <button className="banner-button-moreinfo">

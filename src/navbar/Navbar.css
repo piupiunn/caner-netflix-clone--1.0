@@ -7,7 +7,6 @@
   justify-content: space-between;
   padding: 20px;
   z-index: 1;
-  background-color: black;
 
   transition-timing-function: ease-in;
   transition: all 0.5s;
