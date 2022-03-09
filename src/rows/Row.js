@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import axios from "../axios";
 import {
   FaRegPlayCircle,
@@ -13,6 +14,7 @@ import "./Row.css";
 
 function Row({ title, fetchUrl, isLargeRow, netflixOriginals }) {
   const [movies, setMovies] = useState([]);
+
   const photo_base_URL = "https://image.tmdb.org/t/p/w500";
 
   useEffect(() => {
@@ -30,42 +32,52 @@ function Row({ title, fetchUrl, isLargeRow, netflixOriginals }) {
       <h2 className="list-title">{title}</h2>
       <div className="row-posters">
         {movies.map((movie) => (
-          <div key={movie.id} className="all-hover">
-            <img
-              className={`row-poster ${isLargeRow && "row-poster-large"}`}
-              src={`${photo_base_URL}${
-                isLargeRow ? movie.poster_path : movie.backdrop_path
-              }`}
-              alt={movie.name}
-            />
-            <div className="icons">
-              <FaRegPlayCircle
-                style={{ marginRight: "3px", fontSize: "23px" }}
-              />
-              <FaRegCheckCircle
-                style={{ marginRight: "3px", fontSize: "23px" }}
-              />
-              <FaRegThumbsUp style={{ marginRight: "3px", fontSize: "23px" }} />
-              <FaRegThumbsDown
-                style={{
-                  marginRight: "3px",
-                  fontSize: "23px",
-                  paddingTop: "1px",
-                }}
-              />
-              <FaAngleDown style={{ position: "absolute", right: "20px" }} />
-              <br></br>
-              <p className="match">98% Eşleşme</p>
-              <p className="age">16+</p>
-              <p className="hour">1sa. 47dk.</p>
-              <ul className="genre">
-                Komik
-                <FaDotCircle className="dot" />
-                Eğlenceli
-                <FaDotCircle className="dot" /> Heyecanlı
-              </ul>
+          <>
+            <div key={movie.id} className="all-hover">
+              {
+                <img
+                  className={`row-poster ${isLargeRow && "row-poster-large"}`}
+                  src={`${photo_base_URL}${
+                    isLargeRow ? movie.poster_path : movie.backdrop_path
+                  }`}
+                  alt={movie.name}
+                />
+              }
+
+              <div className="icons">
+                <FaRegPlayCircle
+                  style={{ marginRight: "3px", fontSize: "23px" }}
+                />
+                <FaRegCheckCircle
+                  style={{ marginRight: "3px", fontSize: "23px" }}
+                />
+                <FaRegThumbsUp
+                  style={{ marginRight: "3px", fontSize: "23px" }}
+                />
+
+                <FaRegThumbsDown
+                  style={{
+                    marginRight: "3px",
+                    fontSize: "23px",
+                    paddingTop: "1px",
+                  }}
+                />
+
+                <FaAngleDown style={{ position: "absolute", right: "20px" }} />
+
+                <br></br>
+                <p className="match">98% Eşleşme</p>
+                <p className="age">16+</p>
+                <p className="hour">1sa. 47dk.</p>
+                <ul className="genre">
+                  Komik
+                  <FaDotCircle className="dot" />
+                  Eğlenceli
+                  <FaDotCircle className="dot" /> Heyecanlı
+                </ul>
+              </div>
             </div>
-          </div>
+          </>
         ))}
       </div>
     </div>

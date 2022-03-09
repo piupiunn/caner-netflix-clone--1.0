@@ -1,9 +1,12 @@
+import React from "react";
+
 import Row from "./rows/Row";
 import requests from "./requests";
 import Banner from "./banner/Banner";
-
-import "./App.css";
 import Navbar from "./navbar/Navbar";
+
+//style
+import "./App.css";
 
 function App() {
   return (
