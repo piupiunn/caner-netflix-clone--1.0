@@ -27,9 +27,6 @@ function Banner() {
   console.log(movie);
 
   const opts = {
-    height: "1060px",
-    width: "100%",
-
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
@@ -57,40 +54,61 @@ function Banner() {
 
   return (
     <div>
-      {trailerUrl && <Youtube videoId={trailerUrl} opts={opts} />}
-      {!trailerUrl && (
-        <header
-          style={{
-            backgroundSize: "cover",
-            backgroundImage: `url(
-              https://image.tmdb.org/t/p/original${movie?.backdrop_path}
-              )`,
-            backgroundPosition: "center center",
-          }}
-          className="banner"
-        >
-          <div className="banner-contents">
-            <h1 className="banner-title">
+      {trailerUrl && (
+        <div className="trailer-content">
+          <Youtube
+            className="trailer"
+            videoId={trailerUrl}
+            opts={opts}
+          ></Youtube>
+          <div className="trailer-contents">
+            <h1 className="trailer-title">
               {movie?.title || movie?.name || movie?.original_name}
             </h1>
 
-            <h1 className="banner-description">
+            <h1 className="trailer-description">
               {movie.overview?.substring(0, 150)}...
             </h1>
-            <div className="banner-buttons">
-              <button
-                onClick={() => handleEnter(movie)}
-                className="banner-button-play"
-              >
-                <FaPlay /> Oynat
-              </button>
-              <button className="banner-button-moreinfo">
-                <FaInfo /> Daha fazla Bilgi
-              </button>
-            </div>
           </div>
-          <div className="banner-fadeBottom" />
-        </header>
+
+          <div className="banner-fadeBottom-trailer" />
+        </div>
+      )}
+      {!trailerUrl && (
+        <>
+          <header
+            style={{
+              backgroundSize: "cover",
+              backgroundImage: `url(
+              https://image.tmdb.org/t/p/original${movie?.backdrop_path}
+              )`,
+              backgroundPosition: "center center",
+            }}
+            className="banner"
+          >
+            <div className="banner-contents">
+              <h1 className="banner-title">
+                {movie?.title || movie?.name || movie?.original_name}
+              </h1>
+
+              <h1 className="banner-description">
+                {movie.overview?.substring(0, 150)}...
+              </h1>
+              <div className="banner-buttons">
+                <button
+                  onClick={() => handleEnter(movie)}
+                  className="banner-button-play"
+                >
+                  <FaPlay /> Oynat
+                </button>
+                <button className="banner-button-moreinfo">
+                  <FaInfo /> Daha fazla Bilgi
+                </button>
+              </div>
+            </div>
+            <div className="banner-fadeBottom" />
+          </header>
+        </>
       )}
     </div>
   );
