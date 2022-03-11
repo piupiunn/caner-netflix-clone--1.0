@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from "react";
-
 //for api
 import requests from "../requests";
 import axios from "../axios";
-
 //icons
 import { FaPlay, FaInfo } from "react-icons/fa";
-
 //libs
 import Youtube from "react-youtube";
 import movieTrailer from "movie-trailer";
-
 //style
 import "./Banner.css";
 
@@ -31,6 +27,7 @@ function Banner() {
     fetchData();
   }, []);
 
+  //youtube
   const opts = {
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
@@ -44,6 +41,7 @@ function Banner() {
     },
   };
 
+  //trailer search
   const handleClick = (movie) => {
     if (trailerUrl) {
       setTrailerUrl("");

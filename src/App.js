@@ -1,11 +1,9 @@
 import React from "react";
-
 //comps
 import Row from "./rows/Row";
 import requests from "./requests";
 import Banner from "./banner/Banner";
 import Navbar from "./navbar/Navbar";
-
 //style
 import "./App.css";
 
