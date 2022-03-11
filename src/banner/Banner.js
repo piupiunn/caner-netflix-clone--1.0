@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from "react";
+
+//api
 import axios from "../axios";
+//for api
 import requests from "../requests";
+
+//icons
 import { FaPlay, FaInfo } from "react-icons/fa";
+
+//libs
 import Youtube from "react-youtube";
 import movieTrailer from "movie-trailer";
 
@@ -39,7 +46,7 @@ function Banner() {
     },
   };
 
-  const handleEnter = (movie) => {
+  const handleClick = (movie) => {
     if (trailerUrl) {
       setTrailerUrl("");
     } else {
@@ -72,6 +79,7 @@ function Banner() {
           </div>
 
           <div className="banner-fadeBottom-trailer" />
+          <div className="banner-fadeBottom-trailer2" />
         </div>
       )}
       {!trailerUrl && (
@@ -96,7 +104,7 @@ function Banner() {
               </h1>
               <div className="banner-buttons">
                 <button
-                  onClick={() => handleEnter(movie)}
+                  onClick={() => handleClick(movie)}
                   className="banner-button-play"
                 >
                   <FaPlay /> Oynat

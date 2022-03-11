@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-
+//api
 import axios from "../axios";
+
+//icons
 import {
   FaRegPlayCircle,
   FaRegThumbsUp,
@@ -9,6 +11,7 @@ import {
   FaAngleDown,
   FaDotCircle,
 } from "react-icons/fa";
+
 //style
 import "./Row.css";
 
