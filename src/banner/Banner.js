@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-//api
-import axios from "../axios";
 //for api
 import requests from "../requests";
+import axios from "../axios";
 
 //icons
 import { FaPlay, FaInfo } from "react-icons/fa";
@@ -31,7 +30,6 @@ function Banner() {
     }
     fetchData();
   }, []);
-  console.log(movie);
 
   const opts = {
     playerVars: {
@@ -63,60 +61,58 @@ function Banner() {
     <div>
       {trailerUrl && (
         <div className="trailer-content">
-          <Youtube
-            className="trailer"
-            videoId={trailerUrl}
-            opts={opts}
-          ></Youtube>
+          <Youtube className="trailer" videoId={trailerUrl} opts={opts} />
           <div className="trailer-contents">
             <h1 className="trailer-title">
               {movie?.title || movie?.name || movie?.original_name}
             </h1>
 
-            <h1 className="trailer-description">
-              {movie.overview?.substring(0, 150)}...
-            </h1>
+            {movie.overview ? (
+              <h1 className="trailer-description">
+                {movie.overview.substring(0, 150)}...
+              </h1>
+            ) : (
+              "movie"
+            )}
           </div>
-
+          {/**to softly remove the bottom blackness of youtube api */}
           <div className="banner-fadeBottom-trailer" />
           <div className="banner-fadeBottom-trailer2" />
         </div>
       )}
       {!trailerUrl && (
-        <>
-          <header
-            style={{
-              backgroundSize: "cover",
-              backgroundImage: `url(
+        <header
+          style={{
+            backgroundSize: "cover",
+            backgroundImage: `url(
               https://image.tmdb.org/t/p/original${movie?.backdrop_path}
               )`,
-              backgroundPosition: "center center",
-            }}
-            className="banner"
-          >
-            <div className="banner-contents">
-              <h1 className="banner-title">
-                {movie?.title || movie?.name || movie?.original_name}
-              </h1>
+            backgroundPosition: "center center",
+          }}
+          className="banner"
+        >
+          <div className="banner-contents">
+            <h1 className="banner-title">
+              {movie?.title || movie?.name || movie?.original_name}
+            </h1>
 
-              <h1 className="banner-description">
-                {movie.overview?.substring(0, 150)}...
-              </h1>
-              <div className="banner-buttons">
-                <button
-                  onClick={() => handleClick(movie)}
-                  className="banner-button-play"
-                >
-                  <FaPlay /> Oynat
-                </button>
-                <button className="banner-button-moreinfo">
-                  <FaInfo /> Daha fazla Bilgi
-                </button>
-              </div>
+            <h1 className="banner-description">
+              {movie.overview?.substring(0, 150)}...
+            </h1>
+            <div className="banner-buttons">
+              <button
+                onClick={() => handleClick(movie)}
+                className="banner-button-play"
+              >
+                <FaPlay /> Oynat
+              </button>
+              <button className="banner-button-moreinfo">
+                <FaInfo /> Daha fazla Bilgi
+              </button>
             </div>
-            <div className="banner-fadeBottom" />
-          </header>
-        </>
+          </div>
+          <div className="banner-fadeBottom" />
+        </header>
       )}
     </div>
   );

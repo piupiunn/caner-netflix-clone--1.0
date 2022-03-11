@@ -33,7 +33,6 @@ export default function Navbar() {
         <p>
           <b>Ana Sayfa</b>
         </p>
-
         <p>Diziler</p>
         <p>Filmler</p>
         <p>Yeni ve Popüler</p>
