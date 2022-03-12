@@ -10,10 +10,11 @@
 }
 
 .banner-title {
-  font-size: 3rem;
+  font-size: 6rem;
   font-weight: 800;
   padding-bottom: 0.3rem;
   margin-top: 13rem;
+  font-family: "Special Elite", cursive;
 }
 .banner-description {
   width: 45rem;
@@ -23,7 +24,6 @@
   max-width: 600px;
   height: 120px;
   margin-left: 30px;
-  font-weight: 5;
 }
 
 .banner-button-play {

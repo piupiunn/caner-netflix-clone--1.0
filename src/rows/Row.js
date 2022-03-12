@@ -47,7 +47,11 @@ function Row({ title, fetchUrl, isLargeRow, netflixOriginals }) {
 
             <div className="icons">
               <FaRegPlayCircle
-                style={{ marginRight: "3px", fontSize: "23px" }}
+                style={{
+                  marginLeft: "20px",
+                  marginRight: "3px",
+                  fontSize: "23px",
+                }}
               />
               <FaRegCheckCircle
                 style={{ marginRight: "3px", fontSize: "23px" }}
