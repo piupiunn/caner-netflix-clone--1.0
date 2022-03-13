@@ -62,7 +62,9 @@ function Banner() {
           <Youtube className="trailer" videoId={trailerUrl} opts={opts} />
           <div className="trailer-contents">
             <h1 className="trailer-title">
-              {movie?.title || movie?.name || movie?.original_name}
+              {movie?.title?.toUpperCase() ||
+                movie?.name?.toUpperCase() ||
+                movie?.original_name?.toUpperCase()}
             </h1>
 
             {movie.overview ? (
@@ -91,11 +93,13 @@ function Banner() {
         >
           <div className="banner-contents">
             <h1 className="banner-title">
-              {movie?.title || movie?.name || movie?.original_name}
+              {movie?.title?.toUpperCase() ||
+                movie?.name?.toUpperCase() ||
+                movie?.original_name?.toUpperCase()}
             </h1>
 
             <h1 className="banner-description">
-              {movie.overview?.substring(0, 150)}...
+              {movie?.overview?.substring(0, 200)}...
             </h1>
             <div className="banner-buttons">
               <button

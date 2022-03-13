@@ -134,6 +134,8 @@
   font-weight: 800;
   padding-bottom: 0.3rem;
   margin-top: 13rem;
+  color: white;
+  font-family: "Special Elite", cursive;
 }
 .trailer-description {
   width: 45rem;
@@ -144,4 +146,5 @@
   height: 120px;
   margin-left: 30px;
   font-weight: 5;
+  color: white;
 }
