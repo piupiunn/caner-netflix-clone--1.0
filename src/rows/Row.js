@@ -9,8 +9,6 @@ import {
   FaRegCheckCircle,
   FaAngleDown,
   FaDotCircle,
-  FaStepBackward,
-  FaStepForward,
 } from "react-icons/fa";
 //style
 import "./Row.css";
@@ -35,7 +33,7 @@ function Row({ title, fetchUrl, isLargeRow, netflixOriginals }) {
       <h2 className="list-title">{title}</h2>
 
       <div className="row-posters">
-        {movies.map((movie) => (
+        {movies?.map((movie) => (
           <div key={movie.id} className="all-hover">
             <img
               className={`row-poster ${isLargeRow && "row-poster-large"}`}
