@@ -1,0 +1,23 @@
+.footer {
+  margin-left: 450px;
+  display: flex;
+  justify-content: space-between;
+  width: 980px;
+  height: 126px;
+  font-size: 11px;
+  padding-bottom: 50px;
+}
+.footer p {
+  width: 200px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  margin-left: -300px;
+}
+.icons-footer {
+  width: 150px;
+  height: 30px;
+  margin-top: -60px;
+  margin-left: 100px;
+  display: inline-flex;
+}
