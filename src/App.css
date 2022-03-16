@@ -15,3 +15,13 @@
   position: absolute;
   top: 690px;
 }
+
+.numbers {
+  margin-bottom: -390px;
+  margin-left: 130px;
+  display: flex;
+}
+.numbers img {
+  padding-right: 250px;
+  height: 200px;
+}
