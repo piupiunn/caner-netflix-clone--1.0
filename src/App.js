@@ -4,7 +4,7 @@ import Row from "./rows/Row";
 import requests from "./requests";
 import Banner from "./banner/Banner";
 import Navbar from "./navbar/Navbar";
-import Footer from "./banner/footer/Footer";
+import Footer from "./footer/Footer";
 //style
 import "./App.css";
 
@@ -18,7 +18,7 @@ function App() {
         fetchUrl={requests.fetchNetflixOriginals}
         netflixOriginals
       />
-      <Row title="Bilim Kurgu" fetchUrl={requests.fetchScienceFiction} />
+      <Row title="Science Fiction" fetchUrl={requests.fetchScienceFiction} />
       <div className="numbers">
         <img src="./img/1.png" alt="*" />
         <img src="./img/2.png" alt="*" />
@@ -27,16 +27,16 @@ function App() {
         <img src="./img/5.png" alt="*" />
       </div>
       <Row
-        title="Bugünün En Çok İzlenenleri"
+        title="Today's Most Viewed"
         fetchUrl={requests.fetchTrending}
         isLargeRow
       />
-      <Row title="Korku Filmleri" fetchUrl={requests.fetchHorrorMovies} />
-      <Row title="Komediler" fetchUrl={requests.fetchComedyMovies} />
-      <Row title="Aksiyon Filmleri" fetchUrl={requests.fetchActionMovies} />
-      <Row title="Suç Konulu Filmler" fetchUrl={requests.fetchCrimeMovies} />
-      <Row title="Belgeseller" fetchUrl={requests.fetchDocumentaries} />
-      <Row title="Romantik" fetchUrl={requests.fetchRomanceMovies} />
+      <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
+      <Row title="Comedies" fetchUrl={requests.fetchComedyMovies} />
+      <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
+      <Row title="Crime Movies" fetchUrl={requests.fetchCrimeMovies} />
+      <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
+      <Row title="Romantic" fetchUrl={requests.fetchRomanceMovies} />
       <Footer />
     </div>
   );

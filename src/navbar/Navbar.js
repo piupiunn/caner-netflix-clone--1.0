@@ -31,12 +31,13 @@ export default function Navbar() {
       />
       <div className="navbar-sections">
         <p>
-          <b>Ana Sayfa</b>
+          <b>Home</b>
         </p>
-        <p>Diziler</p>
-        <p>Filmler</p>
-        <p>Yeni ve Popüler</p>
-        <p>Listem</p>
+        <p>TV Shows</p>
+        <p>Movies</p>
+        <p>New&Popular</p>
+        <p>My List</p>
+        <p className="clone-tag">Cloned by CanerDemir</p>
       </div>
     </div>
   );

@@ -15,6 +15,7 @@ import "./Row.css";
 
 function Row({ title, fetchUrl, isLargeRow, netflixOriginals }) {
   const [movies, setMovies] = useState([]);
+  const [dates, setDates] = useState([]);
 
   const photo_base_URL = "https://image.tmdb.org/t/p/w500";
 
@@ -62,9 +63,21 @@ function Row({ title, fetchUrl, isLargeRow, netflixOriginals }) {
                   paddingTop: "1px",
                 }}
               />
-              <FaAngleDown style={{ position: "absolute", right: "20px" }} />
+              <FaAngleDown
+                style={{
+                  marginLeft: "150px",
+                  right: "20px",
+                  marginBottom: "10px",
+                }}
+              />
               <br></br>
-              <p className="match">98% Eşleşme</p>
+              <p className="match">
+                {/**date calculation for "new" text */}
+                {movie.release_date?.split("-").reduce((a, b) => a + b) >
+                20220101
+                  ? "New"
+                  : ""}
+              </p>
               <p className="age">16+</p>
               <p className="hour">1sa. 47dk.</p>
               <ul className="genre">

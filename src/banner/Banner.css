@@ -60,13 +60,11 @@
   height: 55px;
   margin-left: 10px;
 
-  padding: 10px 30px 10px 25px;
-
   border-radius: 5px;
   padding-left: 2rem;
   padding-right: 2rem;
 
-  padding-top: 0.5rem;
+  padding-top: 0.7rem;
   padding-bottom: 0.5rem;
 }
 .banner-button-moreinfo:hover {

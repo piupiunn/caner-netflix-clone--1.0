@@ -106,10 +106,10 @@ function Banner() {
                 onClick={() => handleClick(movie)}
                 className="banner-button-play"
               >
-                <FaPlay /> Oynat
+                <FaPlay /> Play
               </button>
               <button className="banner-button-moreinfo">
-                <FaInfo /> Daha fazla Bilgi
+                <FaInfo style={{ marginLeft: "-15px" }} /> More Info
               </button>
             </div>
           </div>
