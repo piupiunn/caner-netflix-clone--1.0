@@ -15,17 +15,16 @@ import "./Row.css";
 
 function Row({ title, fetchUrl, isLargeRow, netflixOriginals }) {
   const [movies, setMovies] = useState([]);
-  const [dates, setDates] = useState([]);
 
   const photo_base_URL = "https://image.tmdb.org/t/p/w500";
 
   useEffect(() => {
-    async function fetchData() {
+    const fetchData = async () => {
       const request = await axios.get(fetchUrl);
       setMovies(request.data.results);
-      console.log(request);
+      console.log(request.data.results);
       return request;
-    }
+    };
     fetchData();
   }, [fetchUrl]);
 
