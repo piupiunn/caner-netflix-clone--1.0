@@ -23,7 +23,6 @@ function Row({ title, fetchUrl, isLargeRow, netflixOriginals }) {
       const request = await axios.get(fetchUrl);
       setMovies(request.data.results);
       console.log(request.data.results);
-      return request;
     };
     fetchData();
   }, [fetchUrl]);
