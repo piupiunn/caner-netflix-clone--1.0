@@ -14,6 +14,8 @@ function Banner() {
   const [movie, setMovie] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState("");
 
+  //radndom poster img from trending list for banner
+
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(requests.fetchTrending);
@@ -42,14 +44,19 @@ function Banner() {
   };
 
   //trailer search
+
   const handleClick = (movie) => {
     if (trailerUrl) {
       setTrailerUrl("");
     } else {
-      movieTrailer(movie?.name || "", { tmdbId: movie.id })
+      movieTrailer(movie?.name || movie?.original_name || "", {
+        tmdbId: movie?.id,
+      })
         .then((response) => {
           const urlParams = new URLSearchParams(new URL(response).search);
+          console.log(urlParams.get("v"));
           setTrailerUrl(urlParams.get("v"));
+          document.querySelector(".top-flex").style.marginTop = "-12%";
         })
         .catch((error) => console.log(error));
     }
@@ -69,7 +76,9 @@ function Banner() {
 
             {movie.overview ? (
               <h1 className="trailer-description">
-                {movie.overview.substring(0, 150)}...
+                {movie.overview.length > 150
+                  ? movie.overview.substring(0, 150) + "..."
+                  : movie.overview}
               </h1>
             ) : (
               "movie"
@@ -109,7 +118,7 @@ function Banner() {
                 <FaPlay /> Play
               </button>
               <button className="banner-button-moreinfo">
-                <FaInfo style={{ marginLeft: "-15px" }} /> More Info
+                <FaInfo /> More Info
               </button>
             </div>
           </div>

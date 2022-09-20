@@ -1,7 +1,8 @@
 .banner {
   color: white;
-  height: 1000px;
-  width: 1940px;
+  width: 100%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 .banner-contents {
@@ -77,19 +78,21 @@
 }
 
 .banner-fadeBottom {
-  height: 42rem;
+  height: 41rem;
   background-image: linear-gradient(
     180deg,
     transparent,
     rgba(19, 18, 18, 0.6),
     #141414
   );
+
+  margin-left: -10%;
 }
 .banner-fadeBottom-trailer {
   position: absolute;
   margin-top: -400px;
 
-  height: 150px;
+  height: 100px;
   width: 100%;
   background-image: linear-gradient(
     180deg,
@@ -116,8 +119,9 @@
 .trailer {
   margin-top: -330px;
   margin-bottom: -10px;
-  height: 1413px;
+  height: 1500px;
   width: 100%;
+
   position: relative;
 }
 
@@ -126,6 +130,7 @@
   margin-top: -800px;
   height: 190px;
   position: absolute;
+  margin-left: 10%;
 }
 
 .trailer-title {

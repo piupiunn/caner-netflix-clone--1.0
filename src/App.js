@@ -16,21 +16,11 @@ function App() {
       <Row
         title="Netflix Originals"
         fetchUrl={requests.fetchNetflixOriginals}
-        netflixOriginals
+        topFlex
       />
       <Row title="Science Fiction" fetchUrl={requests.fetchScienceFiction} />
-      <div className="numbers">
-        <img src="./img/1.png" alt="*" />
-        <img src="./img/2.png" alt="*" />
-        <img src="./img/3.png" alt="*" />
-        <img src="./img/4.png" alt="*" />
-        <img src="./img/5.png" alt="*" />
-      </div>
-      <Row
-        title="Today's Most Viewed"
-        fetchUrl={requests.fetchTrending}
-        isLargeRow
-      />
+
+      <Row title="Today's Most Viewed" fetchUrl={requests.fetchTrending} />
       <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
       <Row title="Comedies" fetchUrl={requests.fetchComedyMovies} />
       <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
