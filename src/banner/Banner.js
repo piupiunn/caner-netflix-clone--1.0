@@ -115,10 +115,10 @@ function Banner() {
                 onClick={() => handleClick(movie)}
                 className="banner-button-play"
               >
-                <FaPlay /> Play
+                <FaPlay className="play-button-icon" /> Play
               </button>
               <button className="banner-button-moreinfo">
-                <FaInfo /> More Info
+                <FaInfo className="info-button-icon" /> More Info
               </button>
             </div>
           </div>

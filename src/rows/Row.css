@@ -3,6 +3,8 @@
   margin-left: 2%;
   margin-right: 2%;
   width: 100%;
+
+  overflow: hidden;
 }
 
 .movie-flex {
@@ -10,8 +12,45 @@
   gap: 1%;
   padding: 2%;
   overflow-x: scroll;
-  overflow-y: hidden;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  position: relative;
+  margin-bottom: 30px;
 }
+
+.movie-flex-left-button {
+  position: sticky;
+  margin-top: -20px;
+  width: 50px;
+  height: 215px !important;
+  left: 0;
+  margin-right: 30px !important;
+  height: 60%;
+  z-index: 2;
+  background-color: black;
+  color: white;
+}
+.movie-flex-left-button:hover {
+  opacity: 0.9;
+}
+.movie-flex-right-button {
+  position: sticky;
+  right: 0;
+
+  margin-top: -20px;
+  width: 50px;
+  height: 215px;
+  z-index: 2;
+  background-color: black;
+  color: white;
+
+  bottom: 0;
+}
+
+.movie-flex-right-button:hover {
+  opacity: 0.9;
+}
+
 .movie-flex::-webkit-scrollbar {
   visibility: hidden;
 }
@@ -42,7 +81,7 @@
 .movie-infos {
   display: grid;
   background-color: #393939;
-  margin-top: -5px;
+  margin-top: -16px;
   height: 120px;
   padding: 5px;
   visibility: hidden;

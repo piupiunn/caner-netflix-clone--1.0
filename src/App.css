@@ -36,64 +36,66 @@
 @media (min-width: 768px) {
 }
 
-@media (max-width: 992px) {
+@media (min-width: 902px) {
+  .movie-flex {
+    padding: 4.5% !important;
+  }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
   .movie-flex {
-    padding-left: 4.5% !important;
-    padding-bottom: 4.5% !important;
+    padding: 4.5% !important;
   }
 }
 @media (min-width: 1101px) {
   .movie-flex {
-    padding-left: 4.5% !important;
+    padding: 4.5% !important;
   }
 }
 @media (min-width: 1201px) {
   .movie-flex {
-    padding-left: 4.5% !important;
+    padding: 4.5% !important;
   }
 }
 
 @media (min-width: 1301px) {
   .movie-flex {
-    padding-left: 4.5% !important;
+    padding: 4.5% !important;
   }
 }
 
 @media (min-width: 1441px) {
   .movie-flex {
-    padding-left: 3% !important;
+    padding: 3% !important;
   }
 }
 @media (min-width: 1541px) {
   .movie-flex {
-    padding-left: 3% !important;
+    padding: 3% !important;
   }
 }
 @media (min-width: 1641px) {
   .movie-flex {
-    padding-left: 3% !important;
+    padding: 3% !important;
   }
 }
 @media (min-width: 1741px) {
   .movie-flex {
-    padding-left: 3% !important;
+    padding: 3% !important;
   }
 }
 @media (min-width: 1841px) {
   .movie-flex {
-    padding-left: 3% !important;
+    padding: 3% !important;
   }
 }
 @media (min-width: 1941px) {
   .movie-flex {
-    padding-left: 3% !important;
+    padding: 3% !important;
   }
 }
 @media (min-width: 2041px) {
   .movie-flex {
-    padding-left: 3% !important;
+    padding: 3% !important;
   }
 }

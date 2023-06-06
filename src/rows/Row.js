@@ -3,7 +3,11 @@ import React, { useState, useEffect } from "react";
 import axios from "../axios";
 
 //icons
-import { AiFillStar } from "react-icons/ai";
+import {
+  AiFillStar,
+  AiOutlineArrowRight,
+  AiOutlineArrowLeft,
+} from "react-icons/ai";
 
 //img
 import failedPoster from "../imgs/not-found.png";
@@ -25,11 +29,32 @@ function Row({ title, fetchUrl, topFlex }) {
     fetchData();
   }, [fetchUrl]);
 
+  const scroolMovieForLeftButton = (e) => {
+    e.target.parentElement.scrollLeft -= 150;
+  };
+
+  const scroolMovieForRightButton = (e) => {
+    e.target.parentElement.scrollLeft += 150;
+  };
+
+  const date = new Date();
+  let day = date.getDate();
+  let month = ("0" + (date.getMonth() - 1)).slice(-2);
+  let year = date.getFullYear();
+  let currentDate = `${year}${month}${day}`;
+  console.log(currentDate);
+
   return (
     <div className={`movies-flex-parent ${topFlex && "top-flex"}`}>
       <h2 className="list-title">{title}</h2>
 
       <div className={"movie-flex "}>
+        <button
+          onClick={scroolMovieForLeftButton}
+          className="movie-flex-left-button"
+        >
+          <AiOutlineArrowLeft />
+        </button>
         {movies?.map((movie) => (
           <div className="movie-parent">
             <div key={movie.id} className="movie-top">
@@ -57,12 +82,12 @@ function Row({ title, fetchUrl, topFlex }) {
                     {/**date calculation for "new" text */}
 
                     {movie.release_date?.split("-").reduce((a, b) => a + b) >
-                    20220801
+                    currentDate
                       ? "New"
                       : ""}
 
                     {movie.first_air_date?.split("-").reduce((a, b) => a + b) >
-                    20220801
+                    currentDate
                       ? "New"
                       : ""}
                   </div>
@@ -110,6 +135,13 @@ function Row({ title, fetchUrl, topFlex }) {
             </div>
           </div>
         ))}
+
+        <button
+          onClick={scroolMovieForRightButton}
+          className="movie-flex-right-button"
+        >
+          <AiOutlineArrowRight />
+        </button>
       </div>
     </div>
   );
